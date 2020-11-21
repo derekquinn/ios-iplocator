@@ -23,6 +23,14 @@
                                     <constraint firstAttribute="height" constant="400" id="kfj-Lh-4Ws"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMc-xj-DaE">
+                                <rect key="frame" x="64" y="190" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Do It"/>
+                                <connections>
+                                    <action selector="locateButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jip-aP-Mvw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -37,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="63"/>
+            <point key="canvasLocation" x="137.68115942028987" y="62.946428571428569"/>
         </scene>
     </scenes>
     <resources>

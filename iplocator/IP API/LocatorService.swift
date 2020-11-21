@@ -7,9 +7,9 @@
 
 import Foundation
 
-class APIService {
+class LocatorService {
     
-    static func getIPLocation(ip: String, location: [Double]){
+    static func getIPLocation(ip: String, locationCompletion: @escaping ([Double]) -> Void) {
         
         var userLocation: [Double] = []
         
@@ -23,12 +23,13 @@ class APIService {
             }
             
             do {
-                print("startdo")
+                
                 let response: IPResponse = try JSONDecoder().decode(IPResponse.self, from: data)
-                print("DAAAATA",data.debugDescription)
+                
                 userLocation.append(response.lat)
                 userLocation.append(response.lon)
-                print(userLocation.debugDescription)
+                
+                locationCompletion(userLocation)
                 
             } catch {
                 print("JSONDecoding failed from url: \(url)", error)

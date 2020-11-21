@@ -6,21 +6,22 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var mapOfIPLocation: MKMapView!
+ 
+    private var ipCoordinates: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LocatorService.getIPLocation(ip: "24.48.0.1", locationCompletion: { userLocation in
+        LocationService.getIPLocation(ip: Constant.michiganTestIp, locationCompletion: { userLocation in
             
-            print("TILDA YOUR A GENIUS",userLocation.debugDescription)
-            
+            LocationHelper.updateLocation(latitude: userLocation[0], longitude: userLocation[1], mapOfIpLocation: self.mapOfIPLocation)
+        
         })
-            
-        }
-        
-        
-    
+    }
 }
 

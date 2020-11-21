@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LocatorService {
+class LocationService {
     
     static func getIPLocation(ip: String, locationCompletion: @escaping ([Double]) -> Void) {
         
@@ -24,7 +24,7 @@ class LocatorService {
             
             do {
                 
-                let response: IPResponse = try JSONDecoder().decode(IPResponse.self, from: data)
+                let response: LocationResponse = try JSONDecoder().decode(LocationResponse.self, from: data)
                 
                 userLocation.append(response.lat)
                 userLocation.append(response.lon)

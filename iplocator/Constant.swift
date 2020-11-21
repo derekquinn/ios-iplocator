@@ -10,4 +10,6 @@ import Foundation
 class Constant {
     
     static let ipApiBaseUrl: String = "http://ip-api.com/json/"
+    static let michiganTestIp: String = "76.230.104.146"
+    static let defaultCameraAltitude: Double = 15000
 }

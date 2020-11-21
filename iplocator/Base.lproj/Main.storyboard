@@ -31,6 +31,12 @@
                                     <action selector="locateButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jip-aP-Mvw"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJQ-59-wv9">
+                                <rect key="frame" x="188" y="190" width="169" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="mapOfIPLocation" destination="XTE-as-l9r" id="pmw-8P-eEi"/>
+                        <outlet property="userEnteredIp" destination="CJQ-59-wv9" id="5af-0k-rKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

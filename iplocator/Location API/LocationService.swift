@@ -14,7 +14,7 @@ class LocationService {
         
         var userLocation: [Double] = []
         
-        let url = Constant.ipApiBaseUrl + ip
+        let url = ConstantValues.ipApiBaseUrl + ip
         
         URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
             
@@ -36,7 +36,5 @@ class LocationService {
                 print("JSONDecoding failed from url: \(url)", error)
             }
         }).resume()
-        
     }
-    
 }

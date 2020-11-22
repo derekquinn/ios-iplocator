@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
-class Constant {
+class ConstantValues {
     
     static let ipApiBaseUrl: String = "http://ip-api.com/json/"
     static let michiganTestIp: String = "76.230.104.146"
     static let defaultCameraAltitude: Double = 15000
     static let incorrectCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+")
     static let ipRegex: String = #"\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b"#
+
 }

@@ -16,7 +16,7 @@ class LocationHelper {
             let currentLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
             mapOfIpLocation.setCenter(currentLocation, animated: true)
-            mapOfIpLocation.camera.altitude = Constant.defaultCameraAltitude
+            mapOfIpLocation.camera.altitude = ConstantValues.defaultCameraAltitude
         }
     }
 }

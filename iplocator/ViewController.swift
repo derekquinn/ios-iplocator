@@ -13,9 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var mapOfIPLocation: MKMapView!
     @IBOutlet var userEnteredIp: UITextField!
     
-    let regex = NSRegularExpression(Constant.ipRegex)
-    
-    private var ipCoordinates: [Double] = []
+    let validIpRegex = NSRegularExpression(ConstantValues.ipRegex)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +26,14 @@ class ViewController: UIViewController {
             return
         }
         
-        if regex.matches(ip){
+        if validIpRegex.matches(ip){
             print("[True] - IP regex.matches(ip)")
             LocationService.getIPLocation(ip: ip, locationCompletion: { userLocation in
                 LocationHelper.updateLocation(latitude: userLocation[0], longitude: userLocation[1], mapOfIpLocation: self.mapOfIPLocation)
             })
+            
         } else {
+            AlertHelper.showInvalidIpAlert()
             print ("[False] - IP regex.matches(ip)")
         }
     }
@@ -55,4 +55,3 @@ extension NSRegularExpression {
         }
     }
 }
-

@@ -23,16 +23,16 @@
                                     <constraint firstAttribute="height" constant="400" id="kfj-Lh-4Ws"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMc-xj-DaE">
-                                <rect key="frame" x="64" y="190" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDP-4v-02t">
+                                <rect key="frame" x="65" y="200" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Do It"/>
+                                <state key="normal" title="Locate IP"/>
                                 <connections>
-                                    <action selector="locateButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jip-aP-Mvw"/>
+                                    <action selector="locateIPPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9wK-ss-zEr"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJQ-59-wv9">
-                                <rect key="frame" x="188" y="190" width="169" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an IP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1z-52-A0K">
+                                <rect key="frame" x="148" y="198" width="209" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,7 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="mapOfIPLocation" destination="XTE-as-l9r" id="pmw-8P-eEi"/>
-                        <outlet property="userEnteredIp" destination="CJQ-59-wv9" id="5af-0k-rKC"/>
+                        <outlet property="userEnteredIp" destination="A1z-52-A0K" id="2Ox-Nj-G6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

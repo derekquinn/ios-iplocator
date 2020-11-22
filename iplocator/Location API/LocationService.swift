@@ -39,16 +39,4 @@ class LocationService {
         
     }
     
-//    static func displayInvalidIpAlert(){
-//        
-//        let invalidIpAlert =  UIAlertController(title: "INVALID INPUT", message: "time to be a dog girl", preferredStyle: .alert)
-//        
-//        let tryAgainButton = UIAlertAction(title: "Try Again", style: .default, handler: { (action) -> Void in
-//            print("Ok button tapped")
-//         })
-//        
-//        invalidIpAlert.addAction(tryAgainButton)
-//        invalidIpAlert.present(invalidIpAlert, animated: true, completion: nil)
-//      
-//    }
 }

@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct IPResponse: Codable {
+struct LocationResponse: Codable {
     let status, country, countryCode, region: String?
     let regionName, city, zip: String?
     let lat, lon: Double

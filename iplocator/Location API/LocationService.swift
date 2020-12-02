@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
-class APIService {
+class LocationService {
     
-    static func getIPLocation(ip: String, location: [Double]){
+    static func getIPLocation(ip: String, locationCompletion: @escaping ([Double]) -> Void) {
         
         var userLocation: [Double] = []
         
-        let url = Constant.ipApiBaseUrl + ip
+        let url = ConstantValues.ipApiBaseUrl + ip
         
         URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
             
@@ -23,17 +24,17 @@ class APIService {
             }
             
             do {
-                print("startdo")
-                let response: IPResponse = try JSONDecoder().decode(IPResponse.self, from: data)
-                print("DAAAATA",data.debugDescription)
+                
+                let response: LocationResponse = try JSONDecoder().decode(LocationResponse.self, from: data)
+                
                 userLocation.append(response.lat)
                 userLocation.append(response.lon)
-                print(userLocation.debugDescription)
+                
+                locationCompletion(userLocation)
                 
             } catch {
                 print("JSONDecoding failed from url: \(url)", error)
             }
         }).resume()
-        
     }
 }
